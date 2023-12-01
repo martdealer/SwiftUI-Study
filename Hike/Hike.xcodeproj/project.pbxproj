@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B471E2A2B19EC0A0078B54D /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B471E292B19EC0A0078B54D /* CustomButtonView.swift */; };
+		6B471E2C2B19FD2D0078B54D /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B471E2B2B19FD2D0078B54D /* GradientButtonStyle.swift */; };
 		6BBC039F2B19B70B00BE51FC /* HikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC039E2B19B70B00BE51FC /* HikeApp.swift */; };
 		6BBC03A12B19B70B00BE51FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC03A02B19B70B00BE51FC /* ContentView.swift */; };
 		6BBC03A32B19B70D00BE51FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBC03A22B19B70D00BE51FC /* Assets.xcassets */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B471E292B19EC0A0078B54D /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		6B471E2B2B19FD2D0078B54D /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		6BBC039B2B19B70B00BE51FC /* Hike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBC039E2B19B70B00BE51FC /* HikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeApp.swift; sourceTree = "<group>"; };
 		6BBC03A02B19B70B00BE51FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,12 +61,12 @@
 		6BBC039D2B19B70B00BE51FC /* Hike */ = {
 			isa = PBXGroup;
 			children = (
+				6BBC03AE2B19C31B00BE51FC /* Component */,
 				6BBC03B12B19C98500BE51FC /* Utility */,
 				6BBC039E2B19B70B00BE51FC /* HikeApp.swift */,
 				6BBC03A02B19B70B00BE51FC /* ContentView.swift */,
 				6BBC03A22B19B70D00BE51FC /* Assets.xcassets */,
 				6BBC03A42B19B70D00BE51FC /* Preview Content */,
-				6BBC03AE2B19C31B00BE51FC /* Component */,
 			);
 			path = Hike;
 			sourceTree = "<group>";
@@ -80,6 +84,7 @@
 			children = (
 				6BBC03AC2B19C21200BE51FC /* CardView.swift */,
 				6BBC03AF2B19C33700BE51FC /* CustomBackgroundView.swift */,
+				6B471E292B19EC0A0078B54D /* CustomButtonView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				6BBC03B22B19C99B00BE51FC /* ColorExtension.swift */,
+				6B471E2B2B19FD2D0078B54D /* GradientButtonStyle.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -165,6 +171,8 @@
 				6BBC03A12B19B70B00BE51FC /* ContentView.swift in Sources */,
 				6BBC03AD2B19C21200BE51FC /* CardView.swift in Sources */,
 				6BBC039F2B19B70B00BE51FC /* HikeApp.swift in Sources */,
+				6B471E2A2B19EC0A0078B54D /* CustomButtonView.swift in Sources */,
+				6B471E2C2B19FD2D0078B54D /* GradientButtonStyle.swift in Sources */,
 				6BBC03B02B19C33700BE51FC /* CustomBackgroundView.swift in Sources */,
 				6BBC03B32B19C99B00BE51FC /* ColorExtension.swift in Sources */,
 			);
