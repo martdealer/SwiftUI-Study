@@ -14,4 +14,6 @@ struct HikeApp: App {
             ContentView()
         }
     }
+    
+    
 }
