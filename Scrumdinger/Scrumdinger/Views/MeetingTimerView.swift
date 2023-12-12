@@ -29,7 +29,7 @@ struct MeetingTimerView: View {
             }
             .overlay {
                 ForEach(speakers) { speaker in
-                    if speaker.isCompleted, let index = speakers.firstIndex(where: { $0.id == speakers.id }) {
+                    if speakers.isCompleted, let index = speakers.firstIndex(where: { $0.id == speakers.id }) {
                         SpeakerArc(speakerIndex: index, totalSpeakers: speakers.count)
                             .rotation(Angle(degrees: -90))
                             .stroke(theme.mainColor, lineWidth: 12)
