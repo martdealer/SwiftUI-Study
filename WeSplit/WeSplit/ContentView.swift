@@ -13,29 +13,31 @@ struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
     @State private var tipPercentage = 0
+    
+    @State private var isTipZero: Bool = false
     let tipPercentages = [0, 10, 15, 20, 25]
-
-
+    
+    
     var body: some View {
         
         var totalPerPerson: Double {
             let peopleCount = Double(numberOfPeople + 2)
             let tipSelection = Double(tipPercentage)
-
+            
             let tipValue = checkAmount / 100 * tipSelection
             let grandTotal = checkAmount + tipValue
             let amountPerPerson = grandTotal / peopleCount
-
+            
             return amountPerPerson
         }
         
         var grandTotal: Double {
             let peopleCount = Double(numberOfPeople + 2)
             let tipSelection = Double(tipPercentage)
-
+            
             let tipValue = checkAmount / 100 * tipSelection
             let grandTotal = checkAmount + tipValue
-
+            
             return grandTotal
         }
         
@@ -59,9 +61,15 @@ struct ContentView: View {
                     Picker("", selection: $tipPercentage) {
                         ForEach(0...100, id: \.self) {
                             Text($0, format: .percent)
+                            
+                            
                         }
+                        
                     }
                     .pickerStyle(.navigationLink)
+                    .onChange(of: tipPercentage) {
+                        isTipZero = ($0 == 0)
+                    }
                     
                     
                     
@@ -69,6 +77,8 @@ struct ContentView: View {
                 }
                 Section ("Total amount with Tips") {
                     Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundStyle(isTipZero ? .red : .black)
+                    
                     
                 }
                 
@@ -86,8 +96,8 @@ struct ContentView: View {
             }
             
         }
-       
-       
+        
+        
     }
 }
 
