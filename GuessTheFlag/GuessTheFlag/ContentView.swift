@@ -33,16 +33,12 @@ struct ContentView: View {
             Rectangle().fill(Color.black.gradient)
                 .ignoresSafeArea()
             VStack {
-                Spacer()
                 Text("Tap the Flag of")
-                    .font(.callout.weight(.black))
-                    .foregroundStyle(.white)
-                
+                    .customBlueTitle()
+                    .padding()
                 
                 VStack(spacing: 15) {
                     VStack {
-                        
-                        
                         Text(countries[correctAnswer])
                             .foregroundStyle(.white)
                             .font(.title.weight(.heavy))
@@ -52,9 +48,7 @@ struct ContentView: View {
                         Button {
                             flagTapped(number)
                         } label: {
-                            Image(countries[number])
-                                .clipShape(.buttonBorder)
-                                .shadow(radius: 5)
+                           FlagImageView(countries: countries, correctAnswer: number)
                         }
                     }
                 }
@@ -63,14 +57,11 @@ struct ContentView: View {
                 .background(.ultraThinMaterial)
                 .clipShape(.rect(cornerRadius: 20))
                 
-                Spacer()
                 
                 Text("Score: ")
-                    
                     .foregroundStyle(.white)
+                    .padding()
                     
-                Spacer()
-                Spacer()
             }
             .padding()
         }
@@ -81,6 +72,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 
 #Preview {
