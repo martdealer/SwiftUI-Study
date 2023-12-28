@@ -27,6 +27,10 @@ struct MissionView: View {
                     }
                     .padding(.top)
                 
+                if let date = mission.launchDate {
+                    Label(date.formatted(date: .complete, time: .omitted), systemImage: "calendar")
+                }
+                
                 VStack(alignment: .leading) {
                     Text("Crew")
                         .font(.title.bold())
