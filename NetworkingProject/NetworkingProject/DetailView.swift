@@ -35,6 +35,6 @@ struct DetailView: View {
 }
 
 
-#Preview {
-    DetailView(user: User.example)
-}
+//#Preview {
+//    DetailView(user: <#T##User#>)
+//}
